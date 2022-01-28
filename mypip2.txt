@@ -13,3 +13,5 @@ requests==2.26.0
 sqlparse==0.4.1
 urllib3==1.26.6
 django-jazzmin==2.4.8
+django-modeltranslation==0.17.3
+
