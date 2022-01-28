@@ -57,22 +57,12 @@ Table of contents
 @import url(animate.min.css);
 @import url(swipebox.css);
 /* Base structure */
-
-@import url(//db.onlinewebfonts.com/c/b8ae029f285b64c59ead6c7fa2bd06e9?family=Chap+Light);
-
-@font-face {font-family: "Chap Light"; src: url("//db.onlinewebfonts.com/t/b8ae029f285b64c59ead6c7fa2bd06e9.eot"); src: url("//db.onlinewebfonts.com/t/b8ae029f285b64c59ead6c7fa2bd06e9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b8ae029f285b64c59ead6c7fa2bd06e9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b8ae029f285b64c59ead6c7fa2bd06e9.woff") format("woff"), url("//db.onlinewebfonts.com/t/b8ae029f285b64c59ead6c7fa2bd06e9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b8ae029f285b64c59ead6c7fa2bd06e9.svg#Chap Light") format("svg"); }
-
-
-
-
 html {
-  font-family: "Chap Light";
   width: 100% !important;
   height: 100% !important;
 }
 
 body {
-  font-family: "Chap Light";
   width: 100% !important;
   height: 100% !important;
   font: 500 15px/1.6 Montserrat, sans-serif;
@@ -583,7 +573,7 @@ a .la:hover {
   }
 }
 .navbar-custom .navbar-brand .logo {
-  max-height: 75px;
+  max-height: 42px;
   display: inline-block;
 }
 
@@ -640,7 +630,7 @@ a .la:hover {
   display: none;
 }
 .navbar-custom.top-nav-collapse .navbar-brand .logodark {
-  max-height: 49px;
+  max-height: 30px;
 }
 .navbar-custom .navbar-brand i {
   vertical-align: middle;
@@ -681,12 +671,6 @@ a .la:hover {
 .navbar-custom .nav li.active {
   outline: 0;
   background-color: transparent !important;
-}
-.navbar-custom .nav li.active a {
-
-}
-.navbar-custom .nav li.active a:hover {
-
 }
 
 .dropdown-menu {

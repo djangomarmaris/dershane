@@ -3,6 +3,7 @@ from PIL import Image, ExifTags
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 from django.urls import reverse
+from embed_video.fields import EmbedVideoField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
@@ -39,9 +40,8 @@ class Product(models.Model):
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, db_index=True)
     image = models.ImageField(upload_to='products/%y/%m/%d', blank=True)
-    image2 = models.ImageField(upload_to='products/%y/%m/%d', blank=True)
-    image3 = models.ImageField(upload_to='products/%y/%m/%d', blank=True)
-    info = models.TextField(default='Ürün Aaçıklama')
+    info = RichTextUploadingField()
+    video = EmbedVideoField()
     description = RichTextUploadingField(blank=True)
     shop = RichTextUploadingField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=0)

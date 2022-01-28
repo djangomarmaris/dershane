@@ -8,24 +8,26 @@
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-main-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand page-scroll" href="/">
-      <!-- Text or Image logo-->
-      <div class="logobig"><img class="logo" src="{% static 'beyazlogo.png' %}"></div><img class="logodark" src="{% static 'zeynep.png' %}"></a>
+
+{% if messages %}
+    {% for message in messages %}
+
+
+      {{message}}
+
+    {% endfor %}
+    {% else %}
+      <div class="logobig"><img class="logo" src="{% static 'logo.png' %}"></div><img class="logodark" src="{% static 'logodark.png' %}"></a>
+{% endif %}
     </div>
     <!-- Collect the nav links, forms, and other content for toggling-->
     <div class="collapse navbar-collapse navbar-main-collapse">
       <ul class="nav navbar-nav">
         <!-- Hidden li included to remove active class from about link when scrolled up past about section-->
         <li class="hidden"><a href="#page-top"></a></li>
-        <li><a href="/zeynep/about/">HAKKINDA<span class="caret"></span></a>
+        <li><a href="/pena/about/">HAKKIMIZDA<span class="caret"></span></a>
         </li>
-        <li><a href="/zeynep/yoga/">YOGA <span class="caret"></span></a>
-          <!---
-          <ul class="dropdown-menu">
-            <li><a href="about.html">Yaşam Yogam</a></li>
-          </ul>
-          ---->
-        </li>
-        <li><a href="/zeynep/share/">PAYLAŞIMLAR<span class="caret"></span></a>
+        <li><a href="/pena/special/">ÖZELDERS<span class="caret"></span></a>
           <!----
           <ul class="dropdown-menu">
             <li><a href="portfolio-single.html">Ders</a></li>
@@ -35,7 +37,7 @@
           </ul>
           ---->
         </li>
-        <li><a href="/zeynep/mentor/">MENTÖRLÜK <span class="caret"></span></a>
+        <li><a href="/pena/doc/">EKİPMANLAR <span class="caret"></span></a>
           <!----
           <ul class="dropdown-menu">
             <li><a href="news2.html">Özel</a></li>
@@ -45,24 +47,21 @@
         </li>
       </ul>
       <ul class="nav navbar-nav pull-right">
-        <li><a href="/zeynep/contact/">İLETİŞİM<span class="caret"></span></a>
-        <li><a href="#">ONLINE <span class="caret"></span></a>
+        <li><a href="/pena/contact/">İLETİŞİM<span class="caret"></span></a>
+        <li><a href="#">EĞİTİMLER <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/shop/online">ONLİNE</a></li>
-            <li><a href="/shop/dersler/">DERS</a></li>
-            <li><a href="/shop/atolye/">ATÖLYE</a></li>
+            <li><a href="/shop/inglizce-dersleri/">İNGLİZCE</a></li>
+            <li><a href="/shop/almanca-dersleri/">ALMANCA</a></li>
+            <!--li><a href="/shop/piyano/">PİYANO</a></li-->
+            <!--li><a href="/shop/flamenco/">FLAMENCO GİTAR</a></li-->
+          </ul>
+        </li>
 
-          </ul>
-        </li>
-        <li><a href="#">DÜKKAN <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/shop/sensin-kartlari/">Sensin Kartları</a></li>
-          </ul>
-        </li>
         {% if request.user.is_authenticated %}
         <li><a href="#">{{request.user}} <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="/order/success/">Satın Aldıklarım</a></li>
+            <li><a href="/pena/upload/">Ödevini Giriş</a></li>
             <li class="dropdown"><a class="dropdown-toggle" href="/user/logout/"><i class="fas fa-sign-in-alt fa-lg" aria-hidden="true"></i> Çıkış</a>
         </li>
           </ul>

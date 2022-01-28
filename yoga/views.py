@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 from django.shortcuts import render,reverse,redirect
 
 # Create your views here.
@@ -7,7 +9,10 @@ from shop.models import Category
 from django.conf import settings
 from django.core.mail import send_mail
 
-from yoga.models import kvvk
+from yoga.models import kvvk ,Documents ,Exam
+
+from .forms import UploadFileForm
+
 
 
 def index(request):
@@ -119,3 +124,30 @@ def contact(request):
 
 
     return render(request,'central/contact.html')
+
+
+
+def document(request):
+    products = Documents.objects.all().order_by('-id')
+
+
+
+    context = {
+
+        'products':products
+    }
+    return render(request,'central/document.html',context)
+
+
+@login_required(login_url="user:login")
+def upload(request):
+    name = request.POST.get('name')
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST,request.FILES)
+        if form.is_valid():
+            file = request.FILES['file']
+            student = Exam.objects.create(name=name,paper=file)
+            student.save()
+    else:
+        form =UploadFileForm()
+    return render(request,'central/upload.html',{'form':form})

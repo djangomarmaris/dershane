@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block seo %}
+
+
+<title>Ödev Girişi</title>
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="" />
+
+<link rel="canonical" href=""/>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<meta name="robots" content="index,follow"/>
+
+<meta name="googlebot" content="index,follow"/>
+
+<meta name="author" content="İhsan Gürol Demirtaş">
+
+<meta name="publisher" content="2020.01" />
+
+{% endblock %}
+
+
+
+
+{% block content %}
+<header class="intro" data-background="{% static 'barca.jpeg' %}">
+      <div class="overlay"></div>
+      <div class="intro-body">
+        <h1>Sınav zamanı</h1>
+        <h4></h4><a class="page-scroll" href="#contact2"><span class="mouse"><span><i class="icon ion-ios-arrow-down"></i></span></span></a>
+      </div>
+</header>
+
+<section class="section-small" id="contact2">
+      <div class="container wow fadeIn">
+        <div class="row">
+          <div class="col-md-4">
+            <p><i class="fa fa-phone la-fw la-lg"></i> +90 530 447 88 48 <br> <i class="fa fa-envelope la-fw la-lg"></i> info@highlicence.com <br>
+            </p>
+            <hr>
+            <!-- Contact Form - Enter your email address on line 17 of the mail/contact_me.php file to make this form work. For more information on how to do this please visit the Docs!-->
+            <form action="/pena/upload/" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                    <h3>Umarım Kopya çekmedin :)</h3>
+                    <h6>Lütfen seviye tespit sınavını gir.</h6>
+                </div>
+                <div class="form-group floating-label-form-group controls">
+                    {{form.file}}
+                </div>
+                  <div class="form-group floating-label-form-group controls">
+                    <input name="name" placeholder="Öğrenci İsmi">
+                </div>
+              </div>
+
+              <div id="success"></div>
+              <button name="btnSubmit" class="btn btn-dark btn-lg" type="submit">Gönder</button>
+            </form>
+          </div>
+          <div class="col-md-8">
+            <!-- Map Section-->
+            <img class="wow slideInRight center-block" width="800" src="{% static 'kopya.jpeg' %}" alt="" data-wow-duration="2s" animation-duration="2s">
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
+
+
+{% block jss %}
+{% endblock %}

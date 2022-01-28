@@ -1,0 +1,12 @@
+1- django-admin startproject projename
+2- python manage.py migrate
+2.1-python manage.py createsuperuser
+3-python manage.py startapp appname
+4- setting dosyasýnda Tepmlates Listin içindeki 'DIRS': [""],templates Yazýlýcak 'DIRS': ["templates"],
+5-Templates Klasörüaçýlý içinde base html açýlýr.
+6-static klasörü açýlýr
+7-Static ve Media Url rootlarý yeklenicek
+7-Ýnclude url ayarlarý 
+8-Staticfiles ayarý
+
+

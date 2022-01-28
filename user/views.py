@@ -62,6 +62,7 @@ def loginUser(request):
 
 
         login(request, user)
+        messages.success(request, "Tebrikler Giriş Yaptınız")
         return redirect("index")
     return render(request,"login.html", context)
 

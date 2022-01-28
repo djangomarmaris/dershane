@@ -28,20 +28,23 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST ="smtp.gmail.com"
-EMAIL_HOST_USER ="halacqr@gmail.com"
+EMAIL_HOST ="smtp.yandex.com.tr"
+EMAIL_HOST_USER ="info@transferciden.com"
 EMAIL_HOST_PASSWORD = "alexBal4848"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'embed_video',
     'cart',
     'crispy_forms',
     'ckeditor',
@@ -96,6 +99,11 @@ DATABASES = {
 }
 
 
+LOCALE_PATHS=[
+    os.path.join(BASE_DIR,'locale')
+]
+
+
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -118,7 +126,27 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'tr'
+MODELTRANSLATION_DEFAULT_LANGUAGE = "tr"
+
+
+
+gettext = lambda s: s
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('tr', gettext('Turkish')),
+
+)
+
+
+MODELTRANSLATION_LANGUAGES = ("en","tr")
+MODELTRANSLATION_FALLBACK_LANGUAGES = ("en","tr")
+MODELTRANSLATION_TRANSLATION_FILES = (
+    "yoga.translation",
+)
+MODELTRANSLATION_PREPOPULATE_LANGUAGE = "tr"
+
+
 
 TIME_ZONE = 'UTC'
 

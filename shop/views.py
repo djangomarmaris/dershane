@@ -11,7 +11,7 @@ def Show(request, category_slug = None):
     tur = Category.objects.filter(name__contains='turlar')
     adre = Category.objects.filter(name__contains='adrenalin')
     korsan = Category.objects.filter(name__contains='tekne')
-    products = Product.objects.filter(available=True).order_by('-id')
+    products = Product.objects.filter(available=True).order_by('id')
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
         products = products.filter(category=category)

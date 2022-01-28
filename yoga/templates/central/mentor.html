@@ -9,7 +9,7 @@
 {% block seo %}
 
 
-<title>Mentörlük</title>
+<title>Özel Ders</title>
 
 <meta name="description" content="" />
 
@@ -33,39 +33,32 @@
 
 
 {% block content %}
-<div class="small-header bg-img-custom" style="background-image: url('{% static 'banner3.jpg' %}');">
+<header class="intro" data-background="{% static 'rom.jpeg' %}">
       <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2>Mnetörlük</h2>
-          </div>
-          <div class="col-md-6 text-right">
-            <h4 class="breadcrumb"><a href="index.html">Home</a> / <a href="shop.html">Shop</a>
-            </h4>
-          </div>
-        </div>
+      <div class="intro-body">
+        <h1>Bire bir dershane</h1>
+        <h4>Neden özel ders?</h4><a class="page-scroll" href="#contact2"><span class="mouse"><span><i class="icon ion-ios-arrow-down"></i></span></span></a>
       </div>
-    </div>
-    <!-- Slider Section-->
-    <section class="wow fadeIn">
+    </header>
+<section class="section-small section-offcet bg-gray">
       <div class="container">
         <div class="row">
-          <div class="col-md-7">
-            <div class="carousel slide carousel-fade" id="carousel-light10" data-ride="carousel">
+          <div class="col-lg-5">
+            <h2>Face to Face</h2>
+            <p>Klasik eğitim metotlarıyla öğrenci bazen zor anlar yaşayabilir. Yaklaşık 30 kişilik sınıfta bir yandan dersini dinlemeye çalışırken bir yandan da dikkatini dağıtan çevresel faktörler ile mücadele etmek zorunda kalabilir. Bu durum öğrencinin derslerden geri kalmasına hatta dönemi verimsiz geçirmesine neden olabilir. Özellikle günümüz yoğun sınav ve ders programları için bir günlük ders eksiği öğrenciye pahalıya mal olabilir.
+              Öğrencinin eğitiminde bire bir özel ders önemli bir yer tutmaktadır. Öğrencinin derslere hakimiyetini arttırırken aynı zamanda sistematik ve verimli çalışma programını hazırlamasına zemin hazırlar. </p>
+          </div>
+          <div class="col-lg-7 carousel-item wow zoomIn" data-wow-duration="2s" data-wow-delay=".2s">
+            <div class="carousel slide carousel-fade" id="carousel-light2">
               <ol class="carousel-indicators">
-                <li class="active" data-target="#carousel-light10" data-slide-to="0"></li>
-                <li data-target="#carousel-light10" data-slide-to="1"></li>
+                <li class="active" data-target="#carousel-light2" data-slide-to="0"></li>
+                <li data-target="#carousel-light2" data-slide-to="1"></li>
               </ol>
               <div class="carousel-inner" role="listbox">
-                <div class="item active"><img src="{% static '017.jpg' %}" alt=""></div>
-                <div class="item"><img src="{% static '018.jpg' %}" alt=""></div>
+                <div class="item active"><img class="center-block" src="{% static '3333.jpeg' %}" alt=""></div>
+                <div class="item"><img class="center-block" src="{% static '4444.webp' %}" alt=""></div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 col-md-offset-1">
-            <h2>Mentörlük</h2>
-            <p>Ne zaman yoga derslerime paylaşım demeye başladım o zaman kendim olmaya, özgürce araştırmalarımdan, pratiklerimden, soru işaretlerimden, kalbimden sunmaya başladım.  Paylaşımlarım yaşamımı, yaşamım paylaşımlarımı destekledi. Sonuçta her nefesimiz bizi içimizdeki sevgiyle buluşturmak için bir ilham değilmi? Yaşamın ve gelişiminde, yoga hocalığında, paylaşımlarında beceriyle akabilmene yardımcı olabilecek ana hatları, sana özel değerlendirerek, sunmak beni çok mutlu eder.</p>
           </div>
         </div>
       </div>
@@ -74,7 +67,7 @@
       <div class="container wow fadeIn">
         <div class="row">
           <div class="col-md-4">
-            <p><i class="fa fa-phone la-fw la-lg"></i> +90 533 721 06 49 <br> <i class="fa fa-envelope la-fw la-lg"></i> info@zeyneburas.com <br> <i class="fa fa-map-marker la-fw la-lg"></i> Akyaka
+            <p><i class="fa fa-phone la-fw la-lg"></i> +90 530 447 88 48 <br> <i class="fa fa-envelope la-fw la-lg"></i> info@???.com <br> <i class="fa fa-map-marker la-fw la-lg"></i> Akyaka
             </p>
             <hr>
             <!-- Contact Form - Enter your email address on line 17 of the mail/contact_me.php file to make this form work. For more information on how to do this please visit the Docs!-->
@@ -104,11 +97,15 @@
           </div>
           <div class="col-md-8">
             <!-- Map Section-->
-            <img class="wow slideInRight center-block" src="{% static '14.png' %}" alt="" data-wow-duration="2s" animation-duration="2s">
+            <img width="900" class="wow slideInRight center-block" src="{% static 'special3.jpg' %}" alt="" data-wow-duration="2s" animation-duration="2s">
           </div>
         </div>
       </div>
     </section>
+<br>
+<br>
+<br>
+
 {% endblock %}
 
 

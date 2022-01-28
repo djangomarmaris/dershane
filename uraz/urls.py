@@ -21,18 +21,22 @@ from django.conf.urls.static import static
 from django.conf.urls import include
 from django.conf.urls.i18n import i18n_patterns
 from yoga import views
-
+from orders.views import *
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('i18n/',include('django.conf.urls.i18n')),
+    path('webhooks/', webhook, name='webhooks'),
+
     path('',views.index,name='index'),
     path('cart/',include('cart.urls', namespace='cart')),
     path('order/', include('orders.urls',namespace='orders')),
     path('shop/',include('shop.urls', namespace='shop')),
     path('user/',include("user.urls")),
-    path('zeynep/',include("yoga.urls")),
+    path('pena/',include("yoga.urls")),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+
 ]
 urlpatterns  += static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
